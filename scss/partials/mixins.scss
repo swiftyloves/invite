@@ -1,18 +1,10 @@
 /* prefix declarations */
-@mixin prefixed($property, $keyframesName, $keyframesName2) {
-    @if ($keyframesName2) {
-        -webkit-#{$property}:#{ $keyframesName}, #{ $keyframesName2};
-        -moz-#{$property}: #{$keyframesName}, #{$keyframesName2};
-        -ms-#{$property}: #{$keyframesName}, #{$keyframesName2};
-         -o-#{$property}: #{$keyframesName}, #{$keyframesName2};
-            #{$property}: #{$keyframesName}, #{$keyframesName2};
-    } @else {
-        -webkit-#{$property}: #{$keyframesName};
-        -moz-#{$property}: #{$keyframesName};
-        -ms-#{$property}: #{$keyframesName};
-         -o-#{$property}: #{$keyframesName};
-            #{$property}: #{$keyframesName};
-    }
+@mixin prefixed($property, $value...) {
+    -webkit-#{$property}:$value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+     -o-#{$property}: $value;
+        #{$property}: $value;
 }
 
 @mixin prefixedKeyframe($name) {
@@ -43,12 +35,12 @@
         $opacity: $opa;
     }
     @include prefixedKeyframe($name) {
-        0% { left: #{$left1}; bottom: 0px; opacity: #{$opacity} };
+        0% { left: #{$left1}; bottom: -10%; opacity: #{$opacity} };
         20% { left: #{$left2}; bottom: #{$unit}; opacity: #{$opacity} };
         40% { left: #{$left1}; bottom: #{$unit*2}; opacity: #{$opacity} };
         60% { left: #{$left2}; bottom: #{$unit*3}; opacity: #{$opacity} };
         80% { left: #{$left1}; bottom: #{$unit*4}; opacity: #{$opacity} };
-        100% { left: #{$left2}; bottom: 100%; opacity: #{$opacity} };
+        100% { left: #{$left2}; bottom: 110%; opacity: #{$opacity} };
     }
 }
 
@@ -58,10 +50,10 @@
         $opacity: $opa;
     }
     @include prefixedKeyframe($name) {
-        0% { left: #{$left1}; bottom: 0px; opacity: #{$opacity} };
+        0% { left: #{$left1}; bottom: -10%; opacity: #{$opacity} };
         25% { left: #{$left2}; bottom: #{$unit*1}; opacity: #{$opacity} };
         50% { left: #{$left1}; bottom: #{$unit*2}; opacity: #{$opacity} };
         75% { left: #{$left1}; bottom: #{$unit*3}; opacity: #{$opacity} };
-        100% { left: #{$left2}; bottom: 100%; opacity: #{$opacity} };
+        100% { left: #{$left2}; bottom: 110%; opacity: #{$opacity} };
     }
 }

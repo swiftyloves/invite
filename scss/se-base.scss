@@ -1,0 +1,199 @@
+@import "partials/reset"; //import Eric Meyer's CSS Reset. Remove this if you have a reset in your main stylesheet
+@import "partials/mixins"; //vendor prefixing mixins
+
+img {
+    max-width: 100%;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+body {
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+.title {
+    font-size: 4em;
+}
+
+#sequence, .photo-container, .black-container {
+    overflow: hidden;
+    height: 100vh;
+    position: relative; /* required */
+    width: 100%;
+}
+
+#sequence > .sequence-canvas li > * {  /* required */
+    position: absolute;
+}
+
+
+#sequence > .sequence-canvas { /* required */
+    height: 100%; 
+    width: 100%;
+}
+
+#sequence > .sequence-canvas > li { /* required */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Slide-UNION */
+.union {
+    background-image:url('../img/beckie_bk.png');
+    background-repeat: repeat;
+}
+
+.black-container {
+    opacity: 0;
+}
+
+/* First */
+.first {
+    background: rgb(165,51,89); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(165,51,89,1) 1%, rgba(107,50,65,1) 40%, rgba(107,50,65,1) 40%, rgba(230,94,98,1) 87%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(165,51,89,1)), color-stop(40%,rgba(107,50,65,1)), color-stop(40%,rgba(107,50,65,1)), color-stop(87%,rgba(230,94,98,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(165,51,89,1) 1%,rgba(107,50,65,1) 40%,rgba(107,50,65,1) 40%,rgba(230,94,98,1) 87%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(165,51,89,1) 1%,rgba(107,50,65,1) 40%,rgba(107,50,65,1) 40%,rgba(230,94,98,1) 87%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(165,51,89,1) 1%,rgba(107,50,65,1) 40%,rgba(107,50,65,1) 40%,rgba(230,94,98,1) 87%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(165,51,89,1) 1%,rgba(107,50,65,1) 40%,rgba(107,50,65,1) 40%,rgba(230,94,98,1) 87%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a53359', endColorstr='#e65e62',GradientType=0 ); /* IE6-9 */
+}
+.first-container {
+    width: 100%;
+    padding-top: 13%;
+    opacity: 0;
+    color: #e65e62;    
+}
+.first-word {
+    max-width: 1000px;
+    font-size: 4em;
+    margin: auto;    
+    text-align: center;
+} 
+
+/* My 25th */
+@include prefixedKeyframe("fade"){
+    from { opacity: 0.1; }
+    to { opacity: 1; }           
+};
+.my-25th {
+    background: rgb(165,51,89); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(165,51,89,1) 1%, rgba(107,50,65,1) 40%, rgba(107,50,65,1) 40%, rgba(230,94,98,1) 87%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(165,51,89,1)), color-stop(40%,rgba(107,50,65,1)), color-stop(40%,rgba(107,50,65,1)), color-stop(87%,rgba(230,94,98,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(165,51,89,1) 1%,rgba(107,50,65,1) 40%,rgba(107,50,65,1) 40%,rgba(230,94,98,1) 87%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(165,51,89,1) 1%,rgba(107,50,65,1) 40%,rgba(107,50,65,1) 40%,rgba(230,94,98,1) 87%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(165,51,89,1) 1%,rgba(107,50,65,1) 40%,rgba(107,50,65,1) 40%,rgba(230,94,98,1) 87%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(165,51,89,1) 1%,rgba(107,50,65,1) 40%,rgba(107,50,65,1) 40%,rgba(230,94,98,1) 87%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a53359', endColorstr='#e65e62',GradientType=0 ); /* IE6-9 */
+    
+    .bir-word {
+        @include prefixed(animation, fade 2s ease-in-out);
+    }
+}
+
+/* MUSIC */
+.music {
+    background: #3f7ad6;
+    color: white;
+    height: 100%;
+    padding: 5px;
+    width: 100%;
+    opacity: 0;
+}
+
+.beckie { 
+    width: 60%;
+    margin-left: 30%;
+}
+
+.music-word{
+    color: #60bbd4;
+    line-height: 3em;
+    text-align: center;
+}
+.music .bk-circle{
+    opacity: 0.3;
+
+    background: white;
+    width: 200px;
+    height: 200px;
+    margin-left: 10%;
+    color: #60bbd4;
+    border: 50px solid white;
+    // padding-top: 65px;
+    // padding-bottom: 65px;
+    border-radius: 100%;
+    @include prefixed(transform, scale(0.8));
+
+}
+
+
+/* ANIMATION */ 
+.animate-out {
+    .beckie {
+        margin-top: 0;
+        -webkit-transition-duration: 1s;
+        -moz-transition-duration: 1s;
+        -o-transition-duration: 1s;
+        -ms-transition-duration: 1s;
+        transition-duration: 1s;
+        // transform:skewX(2deg);
+    }
+    
+    .bk-circle{
+        margin-top: 1%;
+        opacity: 0.3;
+        @include prefixed(transition-duration, 0.4s);
+    }
+}
+
+.animate-in {
+    /* FIRST */
+    .first-container {
+        padding-top: 20%;
+        opacity: 1;
+        @include prefixed(transition-duration, 2s);
+    }
+    /* MUSIC */ 
+    .beckie {
+        margin-top: 10%;
+        -webkit-transition-duration: 1s;
+        -moz-transition-duration: 1s;
+        -o-transition-duration: 1s;
+        -ms-transition-duration: 1s;
+        transition-duration: 1s;
+    }
+
+    .bk-circle{
+        @include prefixed(transition-duration, 5s);
+        @include prefixed(transform, scale(1.2));
+
+        margin-top: 10%;
+        opacity: 1;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+    }
+
+    
+}
+
+
+.music {
+
+}
+
+.bridge {
+    background: orange;
+}
+
+/* set */
