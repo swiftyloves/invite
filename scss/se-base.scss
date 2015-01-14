@@ -1,5 +1,6 @@
 @import "partials/reset"; //import Eric Meyer's CSS Reset. Remove this if you have a reset in your main stylesheet
 @import "partials/mixins"; //vendor prefixing mixins
+@import "spin-cir"; //vendor prefixing mixins
 
 img {
     max-width: 100%;
@@ -45,7 +46,7 @@ body {
 }
 
 /* Slide-UNION */
-.union {
+.union, .union-2, .union-3 {
     background-image:url('../img/beckie_bk.png');
     background-repeat: repeat;
 }
@@ -81,7 +82,7 @@ body {
 /* My 25th */
 @include prefixedKeyframe("fade"){
     from { opacity: 0.1; }
-    to { opacity: 1; }           
+    to { opacity: 1; }
 };
 .my-25th {
     background: rgb(165,51,89); /* Old browsers */
@@ -98,7 +99,23 @@ body {
     }
 }
 
+.music-word, .laughter-word, .game-word {
+    color: #60bbd4;
+    line-height: 3em;
+    text-align: center;
+}
+
 /* MUSIC */
+
+@include prefixedKeyframe("draw"){
+    from { transform: 0.1; }
+    to { opacity: 1; }  
+};
+@include prefixedKeyframe ("spin") { 
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 .music {
     background: #3f7ad6;
     color: white;
@@ -113,11 +130,6 @@ body {
     margin-left: 30%;
 }
 
-.music-word, .laughter-word{
-    color: #60bbd4;
-    line-height: 3em;
-    text-align: center;
-}
 .bk-circle{
     opacity: 0.3;
 
@@ -132,6 +144,54 @@ body {
     border-radius: 100%;
     @include prefixed(transform, scale(0.8));
 
+}
+
+// spin-cir
+
+
+/* GAME */
+.game {
+    background: rgb(230,94,98); /* Old browsers */
+    background: -moz-radial-gradient(40% 60%, circle farthest-side,  rgba(230,94,98,1) 1%, rgba(226,165,78,1) 11%, rgba(207,116,86,1) 30%, rgba(211,51,28,1) 53%, rgba(226,165,78,1) 74%, rgba(216,124,130,1) 89%, rgba(226,89,30,1) 98%); /* FF3.6+ */
+    background: -webkit-gradient(radial, 40% 60%, 0px, 40% 60%, 100%, color-stop(1%,rgba(230,94,98,1)), color-stop(11%,rgba(226,165,78,1)), color-stop(30%,rgba(207,116,86,1)), color-stop(53%,rgba(211,51,28,1)), color-stop(74%,rgba(226,165,78,1)), color-stop(89%,rgba(216,124,130,1)), color-stop(98%,rgba(226,89,30,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(40% 60%, circle farthest-side, rgba(230,94,98,1) 1%,rgba(226,165,78,1) 11%,rgba(207,116,86,1) 30%,rgba(211,51,28,1) 53%,rgba(226,165,78,1) 74%,rgba(216,124,130,1) 89%,rgba(226,89,30,1) 98%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(40% 60%, circle farthest-side,  rgba(230,94,98,1) 1%,rgba(226,165,78,1) 11%,rgba(207,116,86,1) 30%,rgba(211,51,28,1) 53%,rgba(226,165,78,1) 74%,rgba(216,124,130,1) 89%,rgba(226,89,30,1) 98%); /* Opera 12+ */
+    background: -ms-radial-gradient(40% 60%, circle farthest-side,  rgba(230,94,98,1) 1%,rgba(226,165,78,1) 11%,rgba(207,116,86,1) 30%,rgba(211,51,28,1) 53%,rgba(226,165,78,1) 74%,rgba(216,124,130,1) 89%,rgba(226,89,30,1) 98%); /* IE10+ */
+    background: radial-gradient(circle at 40% 60%,  rgba(230,94,98,1) 1%,rgba(226,165,78,1) 11%,rgba(207,116,86,1) 30%,rgba(211,51,28,1) 53%,rgba(226,165,78,1) 74%,rgba(216,124,130,1) 89%,rgba(226,89,30,1) 98%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e65e62', endColorstr='#e2591e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.lamp1 {
+    height: 50%;
+    margin-left: 65%;
+    margin-top: -100%;
+}
+.lamp2 {
+    height: 45%;
+    margin-left: 55%;
+    margin-top: -100%;
+    @include prefixed(transition-delay, 0.2s);
+}
+.lamp3 {
+    height: 25%;
+    margin-left: 70%;
+    margin-top: -100%;
+    @include prefixed(transition-delay, 0.3s);
+    // @include prefixed(animation, fade 2s ease-in-out);
+
+}
+.lamp {
+    @include prefixed(transition-duration, 0.6s);
+    @include prefixed(animation, ease-in-out);
+}
+.game-word {
+    line-height: 2.5em;
+    color: #e64742;
+    text-shadow: 0px -1px 0px #CCCCCC;
+}
+.game-bk-circle {
+    left: 18%;    
+    top: none;
+    bottom: 20%;
 }
 
 /* LAUGHTER */
@@ -159,13 +219,13 @@ body {
     position: absolute;
 }
 li.laughter div.laughter-bk-circle {
-    right: 20%;    
+    right: 20%;
     position: absolute;
     margin-top: 80px;
 }
 .laughter-word, {
     color: #e2591e;
-    line-height: 3.5em;
+    line-height: 4em;
 }
 .laugh1 {
     left: 45%;
@@ -193,7 +253,7 @@ li.laughter div.laughter-bk-circle {
         // transform:skewX(2deg);
     }
     
-    .bk-circle{
+    .bk-circle {
         margin-top: 1%;
         opacity: 0.3;
         @include prefixed(transition-duration, 0.4s);
@@ -209,6 +269,10 @@ li.laughter div.laughter-bk-circle {
         @include prefixed(transition-duration, 2s);
     }
     /* MUSIC */ 
+    .spin-cir-1-container {
+        opacity: 1;
+        @include prefixed(transition-duration, 1s);
+    }
     .beckie {
         margin-top: 10%;
         -webkit-transition-duration: 1s;
@@ -218,7 +282,7 @@ li.laughter div.laughter-bk-circle {
         transition-duration: 1s;
     }
 
-    .bk-circle{
+    .bk-circle {
         @include prefixed(transition-duration, 5s);
         @include prefixed(transform, scale(1.2));
 
@@ -231,6 +295,14 @@ li.laughter div.laughter-bk-circle {
         transition-duration: 0.5s;
     }
 
+    /* GAME */
+    .lamp1, .lamp3 {
+        margin-top: 0;
+    }
+    .lamp2 {
+        margin-top: -80px;
+    }
+    
     /* LAUGH */ 
     .laugh2 {
         @include prefixed(transition-delay, 0.1s);
