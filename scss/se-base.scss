@@ -57,11 +57,6 @@ body {
     background-repeat: repeat;
 }
 
-.black-container {
-    opacity: 0;
-}
-
-
 /* First */
 .first {
     background: rgb(165,51,89); /* Old browsers */
@@ -269,6 +264,50 @@ li.laughter div.laughter-bk-circle {
     left: 40%;
     top: 55%;
 }
+
+/* JOIN */
+@include prefixedKeyframe("float"){
+    0% { margin-top: 8%; };
+    50% { margin-top: 10%; };
+    100% { margin-top: 8%; };
+};
+
+.join {
+    background-image: url('../img/ybear.JPG');
+    background-repeat:no-repeat;
+    background-size: 100% auto;
+
+    .black-container {
+        background: rgba(0,0,0,0.7);
+    }
+    .link {
+        color: #a53359;
+        text-decoration: none;
+        background: rgba(255,255,255,0.2);
+        font-family: 'Lato', Helvetica, sans-serif;
+        border: 20px solid transparent;
+        border-radius: 10px;
+        border-bottom-left-radius: 0;
+        &:hover {
+            color: white;
+        }
+    }
+    .link-container {
+        width: 150px;
+        margin-left: 50%;
+        margin-top: 8%;
+        margin-right: auto;
+        @include prefixed(animation, float 2s ease-in-out infinite);
+    }
+    .tri {
+        width: 0;
+        height: 0;
+        margin-top: 26px;
+        border-style: solid;
+        border-width: 45px 30px 0 8px;
+        border-color: rgba(255,255,255,0.2) transparent transparent transparent;
+    }
+} 
 
 
 /* ANIMATION */ 
