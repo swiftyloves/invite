@@ -1,0 +1,86 @@
+
+/*.hsContainer {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+}
+.hsContent {
+    max-width: 450px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #ebebeb;
+    padding: 0;
+    text-align: center
+}*/
+
+.hsContent {
+    /*position: absolute;*/
+    position: fixed
+}
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Slide 1 */
+#music .bcg {
+    background-image:url('../img/beckie.png');
+    background-repeat:no-repeat;
+    overflow: hidden;
+}
+#slide-1-1 .bcg {
+    background-image:url('../img/beckie.png');
+    background-repeat:no-repeat;
+    /*height: 100%;*/
+}
+.m-beckie {
+    position: fixed;
+    z-index: -1;
+}
+
+.round-bk {
+    background: red;
+    border-radius: 50%;
+    height: 200px;
+    height: 200%;
+    width: 200px;
+}
+
+.music-content {
+    margin-top: 10%;
+}
+/*#slide-2{
+    margin-top: 100px;
+}*/
+/*.homeSlide {
+    height: 70%;
+}
+*/
+/*#slide-2.homeSlide {
+    height: 50%;
+}
+*/
+
+.bir-photos-content img {
+    max-width: 20%;
+}
+
+#food .bcg {
+    background-image:url('../img/a022.png');
+}
+/*#food .bcg {background-image:url('../img/cakes.jpg')}*/
+#slide-4 .bcg {background-image:url('../img/kp.JPG')}
+
+/*#slide-2 .bcg {background-image:url('../img/tea.JPG')}
+#slide-3 .bcg {background-image:url('../img/tea.JPG')}
+#slide-4 .bcg {background-image:url('../img/tea.JPG')}
