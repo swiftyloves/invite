@@ -291,7 +291,7 @@ body {
 .title {
   font-size: 4em; }
 
-#sequence, .photo-container, .black-container {
+#sequence, .photo-container, .black-container, .blank {
   overflow: hidden;
   height: 100vh;
   position: relative;
@@ -437,7 +437,7 @@ body {
   /* IE6-9 */ }
 
 .party-word {
-  color: #fcc908;
+  color: #F6DD7E;
   font-size: 7em; }
 
 @-webkit-keyframes draw {
