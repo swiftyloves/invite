@@ -1,9 +1,10 @@
 $(document).ready(function(){
 	var options = {
-        autoPlay: true
-        autoPlayDelay: 5000
+        autoPlay: true,
+        autoPlayDelay: 3000
     }
-    var sequence = $("#sequence").sequence(options).data("sequence");
+    // var sequence = $("#sequence").sequence(options).data("sequence");
+    var sequence = $("#sequence").sequence().data("sequence");
     sequence.beforeCurrentFrameAnimatesOut = function(){
         //add code to execute here, such as:
         console.log('animates-out',sequence);
