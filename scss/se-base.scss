@@ -311,7 +311,8 @@ li.laughter div.laughter-bk-circle {
 .join {
     background-image: url('../img/ybear.JPG');
     background-repeat:no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+    background-position: 50% 50%;
 
     .black-container {
         background: rgba(0,0,0,0.7);
