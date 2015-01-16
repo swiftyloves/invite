@@ -324,14 +324,17 @@ body {
   padding: 10px; }
 
 .hit {
-  margin: 50px auto; }
+  margin: 50px auto;
+  line-height: 1.5em; }
+  .hit .brows-des {
+    font-size: 0.8em; }
 
 .inter {
   padding: 0px 15px; }
 
 /* Slide-UNION */
 .union, .union-2, .union-3 {
-  background-image: url("../img/beckie_bk.png");
+  background: #fdfdfd;
   background-repeat: repeat; }
 
 /* First */
@@ -434,7 +437,8 @@ body {
   /* IE6-9 */ }
 
 .party-word {
-  color: #fcc908; }
+  color: #fcc908;
+  font-size: 7em; }
 
 @-webkit-keyframes draw {
   from {
@@ -748,6 +752,14 @@ li.laughter div.laughter-bk-circle {
     border-style: solid;
     border-width: 45px 30px 0 8px;
     border-color: rgba(255, 255, 255, 0.2) transparent transparent transparent; }
+  .join .cover-bear {
+    display: block;
+    background: white;
+    width: 30%;
+    height: 70%;
+    left: 33%;
+    top: 17%;
+    opacity: 0; }
 
 /* ANIMATION */
 .animate-out .beckie {
