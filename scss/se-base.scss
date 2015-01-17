@@ -27,8 +27,16 @@ body {
 .title {
     font-size: 4em;
 }
+.device {
+    background: rgba(0,0,0,0.8);
+    color: rgba(255,255,255,0.8);
+    .hit {
+        left:10%;
+        top:10%;
+    }
+}
 
-#sequence, .photo-container, .black-container, .blank {
+#sequence, .photo-container, .black-container, .blank, .device {
     overflow: hidden;
     height: 100vh;
     position: relative; /* required */
@@ -352,6 +360,9 @@ li.laughter div.laughter-bk-circle {
         left: 33%;
         top: 17%;
         opacity: 0;
+        &:hover ~ .link-container .link {
+            color: white;
+        }
     }
     .click {
         color: rgba(255,255,255,0.2);

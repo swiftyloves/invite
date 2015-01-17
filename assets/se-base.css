@@ -768,6 +768,8 @@ li.laughter div.laughter-bk-circle {
     left: 33%;
     top: 17%;
     opacity: 0; }
+    .join .cover-bear:hover ~ .link-container .link {
+      color: white; }
   .join .click {
     color: rgba(255, 255, 255, 0.2);
     left: 55%;
