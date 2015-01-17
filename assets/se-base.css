@@ -291,7 +291,14 @@ body {
 .title {
   font-size: 4em; }
 
-#sequence, .photo-container, .black-container, .blank {
+.device {
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8); }
+  .device .hit {
+    left: 10%;
+    top: 10%; }
+
+#sequence, .photo-container, .black-container, .blank, .device {
   overflow: hidden;
   height: 100vh;
   position: relative;
