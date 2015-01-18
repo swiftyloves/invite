@@ -10,7 +10,7 @@
     right: 0;
     top: 50%;
     padding: 10px 20px;
-    line-height: 2em; }
+    line-height: 1.5em; }
   .union .black-container, .union-2 .black-container, .union-3 .black-container {
     opacity: 0;
     -webkit-transition-duration: 10s;
@@ -25,7 +25,7 @@
     top: 20%;
     opacity: 0; }
   .union .uni-word-3, .union-2 .uni-word-3, .union-3 .uni-word-3 {
-    top: 60%;
+    top: 50%;
     right: 10%;
     opacity: 0;
     background: rgba(0, 0, 0, 0.8); }
@@ -37,6 +37,7 @@
     -o-filter: blur(1.5px);
     filter: blur(1.5px);
     width: 400px;
+    max-width: 80%;
     position: absolute; }
   .union img.az, .union-2 img.az, .union-3 img.az {
     width: 300px;
@@ -428,7 +429,7 @@
     transition-duration: 1.3s; }
   .animate-in div.uni-word-3 {
     opacity: 1;
-    top: 80%;
+    top: 70%;
     -webkit-transition-delay: 1.4s;
     -moz-transition-delay: 1.4s;
     -ms-transition-delay: 1.4s;

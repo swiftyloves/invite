@@ -369,6 +369,9 @@ body {
   opacity: 0;
   color: #e65e62; }
 
+.first-word {
+  line-height: 1.5em; }
+
 .first-word, .laughter-word {
   max-width: 1000px;
   font-size: 4em;
@@ -538,14 +541,20 @@ body {
   opacity: 0; }
 
 .beckie {
-  width: 60%;
-  margin-left: 30%; }
+  width: 900px;
+  right: 10%; }
+
+.beckie-mobile {
+  right: -10%;
+  top: -40px; }
 
 .bk-circle {
   opacity: 0.3;
   background: white;
   width: 200px;
   height: 200px;
+  max-width: 50vw;
+  max-height: 50vw;
   margin-left: 10%;
   color: #60bbd4;
   border: 50px solid white;
@@ -568,9 +577,17 @@ body {
   right: 17.5%;
   top: 20%; }
 
+.cake-mobile {
+  top: 10px;
+  right: -50px;
+  width: 50vw; }
+
 .table {
   right: 15%;
   top: 50%; }
+
+.cake-mobile {
+  width: 50vw; }
 
 /* GAME */
 .game {
@@ -668,6 +685,9 @@ body {
 .laugh {
   width: 10px;
   position: absolute; }
+
+.laugh-mobile {
+  margin-top: 240px; }
 
 li.laughter div.laughter-bk-circle {
   right: 20%;
