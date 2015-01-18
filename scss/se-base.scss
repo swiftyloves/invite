@@ -64,6 +64,11 @@ body {
     top: 20%;
     text-align: center
 }
+@media screen and (max-width: 400px) {
+    .inv-container {
+        left: 0%;
+    }
+}
 .inv {
     box-shadow: 0px 1px 0px #a8a8a8;
     padding: 10px;
@@ -186,10 +191,11 @@ body {
     // margin-left: 30%;
     right: 10%;
 }
-
-.beckie-mobile { 
-    right: -10%;
-    top: -40px;
+@media screen and (max-width: 400px) {
+    .beckie {
+        right: -10%;
+        top: -40px;
+    }
 }
 
 .bk-circle{
@@ -225,17 +231,16 @@ body {
     right: 17.5%;
     top: 20%;
 }
-.cake-mobile {
-    top: 10px;
-    right: -50px;
-    width: 50vw;
+@media screen and (max-width: 400px) {
+    .cake {
+        top: 10px;
+        right: -50px;
+        width: 50vw;
+    }
 }
 .table {
     right: 15%;
     top: 50%;
-}
-.cake-mobile {
-    width: 50vw;
 }
 
 /* GAME */
@@ -307,9 +312,7 @@ body {
     width: 10px;
     position: absolute;
 }
-.laugh-mobile {
-    margin-top: 240px;
-}
+
 li.laughter div.laughter-bk-circle {
     right: 20%;
     position: absolute;
@@ -330,6 +333,20 @@ li.laughter div.laughter-bk-circle {
 .laugh3 {
     left: 40%;
     top: 55%;
+}
+@media screen and (max-width: 400px) {
+    .laugh1 {
+        left: 60%;
+        top: 10%;
+    }
+    .laugh2 {
+        left: 30%;
+        top: 65%;
+    }
+    .laugh3 {
+        left: 60%;
+        top: 75%;
+    }
 }
 
 /* JOIN */
